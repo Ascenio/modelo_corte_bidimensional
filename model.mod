@@ -1,20 +1,20 @@
-int sretangles = 10; // Número de peças a serem cortadas
+int sretangles = 2; // Número de peças a serem cortadas
 range m = 1..sretangles; // A0 será cortada em m pedaços menores
 
-int L0=40; // Length of rectangle A0
-int W0=70; // width of rectangle A0
+int L0=100; // Length of rectangle A0
+int W0=100; // width of rectangle A0
 
 //Orientação de cortes de peças em relação ao A0 
 range L = 0..L0-1; // Possíveis posições inferior-esquerda para o vértice de corte para retângulos menores em relação a largura
 range W = 0..W0-1; // Posições correspondentes em relação ao comprimento
 
 //parâmetros
-int l[m]=[21, 31, 9, 9, 30, 11, 10, 14, 12, 13]; // Largura do retângulo recortado i
-int w[m]=[22, 13, 35, 24, 7, 13, 14, 8, 8, 7]; // Comprimento do retângulo recortado i
-int v[m]=[582, 403, 315, 216, 210, 143, 140, 110, 94, 90]; // Valor do retângulo recortado i
+int l[m]=[15, 15]; // Largura do retângulo recortado i
+int w[m]=[50, 90]; // Comprimento do retângulo recortado i
+int v[m]=[20, 35]; // Valor do retângulo recortado i
 
-int Q[m]= [1, 1, 3, 3, 2, 3, 1, 3, 3, 3]; //Número mínimo de cortes do tipo i que podem ser cortado de A0
-int P[m]= [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //Número máximo de cortes do tipo i que podem ser cortado de A0
+int Q[m]= [4, 4]; //Número mínimo de cortes do tipo i que podem ser cortado de A0
+int P[m]= [0, 0]; //Número máximo de cortes do tipo i que podem ser cortado de A0
 int a[i in m][p in L][q in W][r in L][s in W]; //Contém 1 se o corte do tipo i será feito, caso contrário contém 0
 
 execute calculate_a{
